@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+<<<<<<< Updated upstream
 
 namespace SimonGame
 { 
@@ -25,6 +26,19 @@ namespace SimonGame
                 _InputList.Add(_buttonValue);
             }
             
+=======
+namespace SimonGame
+{
+    
+
+    public class Button
+    {
+      
+
+        public Button()
+        {
+
+>>>>>>> Stashed changes
         }
     }
 }
