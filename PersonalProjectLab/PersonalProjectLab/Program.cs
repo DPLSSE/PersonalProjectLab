@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using SimonGame;
 
-namespace PersonalProjectLab
+namespace SimonGame
 {
     class Program
     {
