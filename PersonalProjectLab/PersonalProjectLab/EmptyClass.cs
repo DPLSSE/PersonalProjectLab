@@ -1,10 +1,30 @@
 ﻿using System;
-namespace PersonalProjectLab
-{
-    public class EmptyClass
+using System.Collections.Generic;
+
+namespace SimonGame
+{ 
+
+    public class Button
     {
-        public EmptyClass()
+        List<int> _InputList;
+        List<int> _OutputList;
+        int _buttonValue;
+        int _UserIn;
+
+
+        public Button(int buttonValue)
         {
+            _buttonValue = buttonValue;
+
+        }
+      
+        public void addToInputList(List<int> InputtyList, int UserIn)
+        {
+            if (UserIn == _buttonValue)
+            {
+                _InputList.Add(_buttonValue);
+            }
+            
         }
     }
 }
