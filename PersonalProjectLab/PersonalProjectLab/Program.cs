@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using SimonGame;
 
 namespace SimonGame
 {
@@ -18,43 +17,57 @@ namespace SimonGame
             Button Button2 = new Button(2);
             Button Button3 = new Button(3);
             Button Button4 = new Button(4);
+            int iterationCounter = 0;
 
             while (listsMatch == true)
             {
                 OutList.Remove(0);
-                int outValue = randomButton.Next(1, 5);
-                Console.WriteLine(outValue);
-                OutList.Add(outValue);
-                    
-                OutList.Add(0);
-                int userInput = int.Parse(Console.ReadLine());
-                Button2.addToInputList(InList, userInput);
-                Button2.addToInputList(InList, userInput);
-                Button2.addToInputList(InList, userInput);
-                Button2.addToInputList(InList, userInput);
-
-                if (userInput == 0)
+                for (int j = 0; j <= iterationCounter; j++)
                 {
-                    if (OutList == InList)
+                    int outValue = randomButton.Next(1, 5);
+                    Console.WriteLine(outValue);
+                    OutList.Add(outValue);
+                    
+                }
+                OutList.Add(0);
+                iterationCounter += 1;
+
+                for (int i = 0; i <= (iterationCounter); i++)
+                {
+                    int userInput = int.Parse(Console.ReadLine());
+                    if (userInput != 0)
                     {
-                        listsMatch = true;
+                        Button2.addToInputList(InList, userInput);
+                        Button2.addToInputList(InList, userInput);
+                        Button2.addToInputList(InList, userInput);
+                        Button2.addToInputList(InList, userInput);
+                    }
+
+
+                    else if (userInput == 0)
+                    {
+                        if (OutList == InList)
+                        {
+                            listsMatch = true;
+
+                        }
+                        else
+                        {
+                            listsMatch = false;
+                        }
 
                     }
-                    else
-                    {
-                        listsMatch = false;
-                    }
-
                 }
                 
+
             }
         }
 
 
 
-            
-   
 
-       
+
+
+
     }
 }
