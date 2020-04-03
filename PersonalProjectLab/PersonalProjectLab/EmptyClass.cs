@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 
@@ -9,6 +10,7 @@ namespace SimonGame
     {
         
         int _buttonValue;
+        List<int> _UserInputList;
         
 
 
@@ -19,12 +21,12 @@ namespace SimonGame
 
         }
 
-        public void addToInputList(List<int> InputtyList, int UserIn)
+        public void addToInputList(List<int> UserInputList, int UserIn)
         {
-            
+           
             if (UserIn == _buttonValue)
             {
-                InputtyList.Add(_buttonValue);
+                UserInputList.Add(_buttonValue);
             }
         }
     }
