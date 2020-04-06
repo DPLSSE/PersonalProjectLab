@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using SimonGame;
 using SimonGameClass;
 using System.Linq;
+using GamestatsClass;
 
 
 namespace PersonalProjectLabTests
@@ -11,6 +12,8 @@ namespace PersonalProjectLabTests
     [TestClass]
     public class UnitTest1
     {
+        int iterations = 15;
+
         [TestMethod]
         public void ListComparison()
         {
@@ -19,8 +22,9 @@ namespace PersonalProjectLabTests
             List<int> TestOutput = new List<int>();
             List<int> TestInput = new List<int>();
             int TestUserIn = 5;
+            
             //act
-            for (int i = 0; i <= 15; i++)
+            for (int i = 0; i <= iterations; i++)
             {
                 TestButton.addToInputList(TestInput, TestUserIn);
                 TestOutput.Add(5);
@@ -37,6 +41,13 @@ namespace PersonalProjectLabTests
             }
             //assert
             Assert.AreEqual(ListsAreSame, true);
+        }
+        public void GameStatsTest()
+        {
+            GameStats TestStats = new GameStats();
+            TestStats.printStats(iterations);
+
+           
         }
     }
 }
