@@ -35,16 +35,11 @@ namespace SimonGame
             {
                 Console.Clear();
                 OutList.Remove(0);
-                
-                
-                    
+                  
                 int outValue = randomButton.Next(1, 5);
                  
-                  
                 OutList.Add(outValue);
 
-
-                
                 foreach (int number in OutList)
                 {
                     Console.WriteLine(number);
