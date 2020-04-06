@@ -60,6 +60,7 @@ namespace SimonGame
                     Console.WriteLine(outValue);
                     OutList.Add(outValue);
 
+
                 }
                 OutList.Add(0);
                 iterationCounter += 1;
@@ -89,14 +90,20 @@ namespace SimonGame
                         {
                             listsMatch = false;
                             Console.WriteLine("Game over");
+                            int finalCount = iterationCounter - 1;
+                            Console.WriteLine("final count is " + finalCount);
+
                         }
 
                     }
+
                 }
 
 
             }
+            
         }
+        
 
 
 
