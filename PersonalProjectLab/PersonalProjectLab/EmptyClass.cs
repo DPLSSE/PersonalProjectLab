@@ -3,14 +3,14 @@ using System.Linq;
 using System.Collections.Generic;
 
 
-namespace SimonGame
+namespace SimonGameClass
 {
 
     public class Button
     {
         
         int _buttonValue;
-        List<int> _UserInputList;
+        
         
 
 
