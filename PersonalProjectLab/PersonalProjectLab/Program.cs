@@ -15,7 +15,7 @@ namespace SimonGame
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Welcome to Simon.  The objective is simple: Survive");
+            Console.WriteLine("Welcome to Simon.  The objective is simple: Survive.");
             Thread.Sleep(3000);
             Console.WriteLine("To play, enter the string of numbers that appears.  Then enter zero to end your turn.");
             Thread.Sleep(5000);
@@ -35,39 +35,29 @@ namespace SimonGame
             {
                 Console.Clear();
                 OutList.Remove(0);
-                for (int j = 0; j <= iterationCounter; j++)
-                {
+                
+                
                     
-                    int outValue = randomButton.Next(1, 5);
-                    //console colors: just for fun!
-                    //if (outValue == 1)
-                  //  {
-                  //      Console.ForegroundColor = ConsoleColor.Cyan;
-                  //  }
-                  //  else if (outValue == 2)
-                  //  {
-                  //      Console.ForegroundColor = ConsoleColor.Green;
-                  //  }
-                  //  else if (outValue == 3)
-                  //  {
-                  //      Console.ForegroundColor = ConsoleColor.Yellow;
-                   // }
-                  //  else
-                  //  {
-                  //      Console.ForegroundColor = ConsoleColor.Red;
-                  //  }
-                    //back to actual code
-                    Console.WriteLine(outValue);
-                    OutList.Add(outValue);
+                int outValue = randomButton.Next(1, 5);
+                 
+                  
+                OutList.Add(outValue);
 
 
+                
+                foreach (int number in OutList)
+                {
+                    Console.WriteLine(number);
+                    Thread.Sleep(750);
+                    Console.Clear();
                 }
                 OutList.Add(0);
                 iterationCounter += 1;
-                InList.Remove(0);
+                InList.Clear();
 
-                for (int i = 0; i <= (iterationCounter); i++)
+                for (int i = 0; i <= (OutList.Count-1); i++)
                 {
+                    
                     int userInput = int.Parse(Console.ReadLine());
                     if (userInput != 0)
                     {
@@ -90,7 +80,7 @@ namespace SimonGame
                         {
                             listsMatch = false;
                             GameStats FinalStats = new GameStats();
-                            FinalStats.printStats(iterationCounter);
+                            FinalStats.printStats(iterationCounter, OutList.Count);
 
                         }
 
