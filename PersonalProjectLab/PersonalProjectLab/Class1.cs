@@ -24,6 +24,7 @@ namespace GamestatsClass
             Console.WriteLine("Simon says,'Please play again!'");
             Thread.Sleep(1500);
             Console.WriteLine("Simon also says, 'Help! I'm trapped in a computer!'");
+            Thread.Sleep(1500);
             
         }
     }
