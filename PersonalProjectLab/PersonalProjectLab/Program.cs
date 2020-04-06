@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using SimonGameClass;
-
+using GamestatsClass;
 
 namespace SimonGame
 {
@@ -89,9 +89,8 @@ namespace SimonGame
                         else
                         {
                             listsMatch = false;
-                            Console.WriteLine("Game over");
-                            int finalCount = iterationCounter - 1;
-                            Console.WriteLine("final count is " + finalCount);
+                            GameStats FinalStats = new GameStats();
+                            FinalStats.printStats(iterationCounter);
 
                         }
 
