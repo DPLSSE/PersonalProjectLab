@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using SimonGameClass;
 
 
 namespace SimonGame
@@ -12,8 +14,11 @@ namespace SimonGame
 
         static void Main(string[] args)
         {
-            
 
+            Console.WriteLine("Welcome to Simon.  The objective is simple: Survive");
+            Thread.Sleep(3000);
+            Console.WriteLine("To play, enter the string of numbers that appears.  Then enter zero to end your turn.");
+            Thread.Sleep(5000);
             var randomButton = new Random();
             List<int> OutList = new List<int>();
             List<int> InList = new List<int>();
@@ -35,22 +40,22 @@ namespace SimonGame
                     
                     int outValue = randomButton.Next(1, 5);
                     //console colors: just for fun!
-                    if (outValue == 1)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Cyan;
-                    }
-                    else if (outValue == 2)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                    }
-                    else if (outValue == 3)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                    }
-                    else
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                    }
+                    //if (outValue == 1)
+                  //  {
+                  //      Console.ForegroundColor = ConsoleColor.Cyan;
+                  //  }
+                  //  else if (outValue == 2)
+                  //  {
+                  //      Console.ForegroundColor = ConsoleColor.Green;
+                  //  }
+                  //  else if (outValue == 3)
+                  //  {
+                  //      Console.ForegroundColor = ConsoleColor.Yellow;
+                   // }
+                  //  else
+                  //  {
+                  //      Console.ForegroundColor = ConsoleColor.Red;
+                  //  }
                     //back to actual code
                     Console.WriteLine(outValue);
                     OutList.Add(outValue);
@@ -83,6 +88,7 @@ namespace SimonGame
                         else
                         {
                             listsMatch = false;
+                            Console.WriteLine("Game over");
                         }
 
                     }
