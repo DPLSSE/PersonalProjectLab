@@ -38,5 +38,9 @@ namespace PersonalProjectLabTests
             //assert
             Assert.AreEqual(ListsAreSame, true);
         }
+        public void GameStatsTest()
+        {
+
+        }
     }
 }
