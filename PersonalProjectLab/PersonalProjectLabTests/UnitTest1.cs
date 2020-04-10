@@ -7,7 +7,7 @@ using System.Linq;
 using GamestatsClass;
 
 
-namespace PersonalProjectLabTests
+namespace ListComparisonClass
 {
     [TestClass]
     public class UnitTest1
@@ -42,12 +42,6 @@ namespace PersonalProjectLabTests
             //assert
             Assert.AreEqual(ListsAreSame, true);
         }
-        public void GameStatsTest()
-        {
-            GameStats TestStats = new GameStats();
-            TestStats.printStats(iterations);
-
-           
-        }
+        
     }
 }
