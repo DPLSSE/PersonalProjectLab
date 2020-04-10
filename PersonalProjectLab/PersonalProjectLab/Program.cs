@@ -17,7 +17,7 @@ namespace SimonGame
 
             Console.WriteLine("Welcome to Simon.  The objective is simple: Survive.");
             Thread.Sleep(3000);
-            Console.WriteLine("To play, enter the string of numbers that appears.  Then enter zero to end your turn.");
+            Console.WriteLine("To play, enter the string of numbers that appears, one by one.  Then enter zero to end your turn.");
             Thread.Sleep(5000);
             var randomButton = new Random();
             List<int> OutList = new List<int>();
